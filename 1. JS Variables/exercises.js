@@ -31,7 +31,7 @@ alert(
     " characters remaining."
 );
 
-//SLICE METHOD
+//? SLICE METHOD
 let name2 = "Susan";
 name2.slice(0, 4); // 4-0 = 4 characters. Result will be "Susa"
 
@@ -40,3 +40,11 @@ let tweet2 = prompt("Compose your tweet:");
 let tweetUnder140 = tweet2.slice(0, 140);
 alert(tweetUnder140);
 // Short version:     alert(prompt("Compose your tweet:").slice(0, 140));
+
+//? toUpperCase() and toLowerCase() METHODS
+let japaneseSurname = "Kinomoto";
+japaneseSurname = japaneseSurname.toUpperCase();
+let pet = "MoCHI";
+pet = pet.toLowerCase();
+
+/*1.4 Create an alert that capitalises the first letter of the surname*/
