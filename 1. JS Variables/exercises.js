@@ -54,3 +54,12 @@ let upperCaseLetter = firstLetter.toUpperCase();
 let restSurname = surname.slice(1, surname.length);
 let capitalisedSurname = upperCaseLetter + restSurname;
 alert("Hello, " + capitalisedSurname);
+
+/* 
+1 - I created a variable that stores the surname that the user enters via prompt
+2 - I capitalised the 1st letter of their surname
+   a - Isolated the 1st letter
+   b - Turned the 1st letter to upper case
+   c - Isolated the rest of the surname
+   d - Concatenated the 1st letter with the rest of the surname 
+3 - I used the capitalised version to greet the user using an alert */
