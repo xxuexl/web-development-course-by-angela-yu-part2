@@ -47,11 +47,14 @@ japaneseSurname = japaneseSurname.toUpperCase();
 let pet = "MoCHI";
 pet = pet.toLowerCase();
 
-/*1.4 Create an alert that capitalises the first letter of the surname*/
+/*1.4 Create an alert that capitalises the first letter of the surname. 
+Optional: Add the option that changes the rest of the surname
+to lower case if necessary.*/
 let surname = prompt("Introduce your surname, please:");
 let firstLetter = surname.slice(0, 1);
 let upperCaseLetter = firstLetter.toUpperCase();
 let restSurname = surname.slice(1, surname.length);
+restSurname = restSurname.toLowerCase();
 let capitalisedSurname = upperCaseLetter + restSurname;
 alert("Hello, " + capitalisedSurname);
 
@@ -61,5 +64,6 @@ alert("Hello, " + capitalisedSurname);
    a - Isolated the 1st letter
    b - Turned the 1st letter to upper case
    c - Isolated the rest of the surname
-   d - Concatenated the 1st letter with the rest of the surname 
+   d - Change the rest of the surname to lower case
+   e - Concatenated the 1st letter with the rest of the surname 
 3 - I used the capitalised version to greet the user using an alert */
