@@ -30,3 +30,9 @@ alert(
     remainingCharacters +
     " characters remaining."
 );
+
+//SLICE METHOD
+let name2 = "Susan";
+name2.slice(0, 4); // 4-0 = 4 characters. Result will be "Susa"
+
+/*1.4 Create an alert that cuts the tweet down to 140 characters*/
