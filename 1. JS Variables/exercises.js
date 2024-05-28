@@ -48,3 +48,9 @@ let pet = "MoCHI";
 pet = pet.toLowerCase();
 
 /*1.4 Create an alert that capitalises the first letter of the surname*/
+let surname = prompt("Introduce your surname, please:");
+let firstLetter = surname.slice(0, 1);
+let upperCaseLetter = firstLetter.toUpperCase();
+let restSurname = surname.slice(1, surname.length);
+let capitalisedSurname = upperCaseLetter + restSurname;
+alert("Hello, " + capitalisedSurname);
