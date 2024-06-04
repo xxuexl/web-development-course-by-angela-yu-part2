@@ -1,4 +1,5 @@
-/*1.1 Parameters and arguments*/
+//? FUNCTIONS: PARAMETERS AND ARGUMENTS
+/*1.1 Add a cost for the bottles*/
 function getMilk(money) {
   console.log("leaveHouse");
   console.log("moveRight");
@@ -28,3 +29,13 @@ function lifeInWeeks(age) {
   );
 }
 lifeInWeeks(30);
+
+//? FUNCTIONS: OUTPUTS AND RETURN VALUES
+/*1.3 Functions*/
+
+function buyWater(money) {
+  return money % 1.5; //Gives the remainder of this division
+}
+
+let change = buyWater(4);
+console.log(change);
