@@ -1,10 +1,10 @@
 //? FUNCTIONS: PARAMETERS AND ARGUMENTS
-/*1.1 Add a cost for the bottles*/
+/*2.1 Add a cost for the bottles*/
 function getMilk(money) {
   console.log("leaveHouse");
   console.log("moveRight");
   let numberOfBottles = Math.floor(money / 1.5); //1.5 the cost per bottle
-  //With Math.floor we round the number of bottles
+  //With Math.floor we round down the number of bottles
   console.log("buy " + numberOfBottles + " bottles of milk");
   console.log("moveLeft");
   console.log("enterHouse");
@@ -12,7 +12,7 @@ function getMilk(money) {
 
 getMilk(5);
 
-/*1.2 Life in weeks: Create a function that tells us how many days, weeks and months we have left if we live until 90 years old.*/
+/*2.2 Life in weeks: Create a function that tells us how many days, weeks and months we have left if we live until 90 years old.*/
 function lifeInWeeks(age) {
   let yearsRemaining = 90 - age;
   let days = yearsRemaining * 365;
@@ -32,7 +32,7 @@ lifeInWeeks(30);
 
 //? FUNCTIONS: OUTPUTS AND RETURN VALUES
 
-/*1.3 Basic functions with return*/
+/*2.3 Basic functions with return*/
 
 function buyWater(money) {
   return money % 1.5; //Gives the remainder of this division
@@ -41,7 +41,7 @@ function buyWater(money) {
 let change = buyWater(4);
 console.log(change);
 
-/*1.4 Adding more inputs*/
+/*2.4 Adding more inputs*/
 function getSoda(money, costPerCan) {
   console.log("leaveHouse");
 
@@ -63,12 +63,18 @@ function calcChange(startingAmount, costPerCan) {
 
 console.log("Hello friend, here is your " + getSoda(10, 3) + " change");
 
-/*1.5 BMI calculator challenge: Create a BMI calculator using JS. */
+/*2.5 BMI calculator challenge: Create a BMI calculator using JS.*/
 
 function bmiCalculator(startingWeight, height) {
-  let bmi = startingWeight / (height * height);
+  let bmi = startingWeight / (height * height); //?Alt for height: Math.pow(height, 2);
   return Math.round(bmi);
 }
 
 let bmi = bmiCalculator(65, 1.8);
 console.log(bmi);
+
+/*2.6 MATH.RANDOM*/
+let random = Math.random();
+random = random * 6; //We put the range from 0 to 5.999999...
+random = Math.floor(random) + 1; //Now it goes from 1 to 6
+console.log(random);
