@@ -39,3 +39,20 @@ function buyWater(money) {
 
 let change = buyWater(4);
 console.log(change);
+
+/*1.4*/
+function getSoda(money) {
+  console.log("leaveHouse");
+
+  console.log("buy " + calcSodas(money, 1.5) + " cans of soda");
+  console.log("headHouse");
+  console.log("enterHouse");
+  return money % 1.5;
+}
+
+function calcSodas(startingMoney, costPerCan) {
+  let numberOfCans = Math.floor(startingMoney / costPerCan);
+  return numberOfCans;
+}
+
+getSoda(5);
