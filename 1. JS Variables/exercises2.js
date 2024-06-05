@@ -41,13 +41,13 @@ let change = buyWater(4);
 console.log(change);
 
 /*1.4*/
-function getSoda(money) {
+function getSoda(money, costPerCan) {
   console.log("leaveHouse");
 
-  console.log("buy " + calcSodas(money, 1.5) + " cans of soda");
+  console.log("buy " + calcSodas(money, costPerCan) + " cans of soda");
   console.log("headHouse");
   console.log("enterHouse");
-  return money % 1.5;
+  return calcChange(money, costPerCan);
 }
 
 function calcSodas(startingMoney, costPerCan) {
@@ -55,4 +55,9 @@ function calcSodas(startingMoney, costPerCan) {
   return numberOfCans;
 }
 
-getSoda(5);
+function calcChange(startingAmount, costPerCan) {
+  let moneyChange = startingAmount % costPerCan;
+  return moneyChange;
+}
+
+console.log("Hello friend, here is your " + getSoda(10, 3) + " change");
