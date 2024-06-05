@@ -31,7 +31,8 @@ function lifeInWeeks(age) {
 lifeInWeeks(30);
 
 //? FUNCTIONS: OUTPUTS AND RETURN VALUES
-/*1.3 Functions*/
+
+/*1.3 Basic functions with return*/
 
 function buyWater(money) {
   return money % 1.5; //Gives the remainder of this division
@@ -40,7 +41,7 @@ function buyWater(money) {
 let change = buyWater(4);
 console.log(change);
 
-/*1.4*/
+/*1.4 Adding more inputs*/
 function getSoda(money, costPerCan) {
   console.log("leaveHouse");
 
@@ -61,3 +62,13 @@ function calcChange(startingAmount, costPerCan) {
 }
 
 console.log("Hello friend, here is your " + getSoda(10, 3) + " change");
+
+/*1.5 BMI calculator challenge: Create a BMI calculator using JS. */
+
+function bmiCalculator(startingWeight, height) {
+  let bmi = startingWeight / (height * height);
+  return Math.round(bmi);
+}
+
+let bmi = bmiCalculator(65, 1.8);
+console.log(bmi);
