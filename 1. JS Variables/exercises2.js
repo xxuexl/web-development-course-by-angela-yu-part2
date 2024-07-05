@@ -86,3 +86,26 @@ let hisName = prompt("What's his name?");
 let lovePercentage = Math.random() * 100;
 lovePercentage = Math.floor(lovePercentage) + 1;
 alert("You have " + lovePercentage + "% love score!");
+
+/*IF ELSE CONDITIONALS */
+if (track === "clear") {
+  goStraight();
+} else {
+  turnRight();
+}
+
+prompt("What's your name?");
+prompt("What's his name?");
+let loveScore = Math.random() * 100;
+loveScore = Math.floor(loveScore) + 1; // 1-100
+
+if (loveScore > 70) {
+  alert(
+    "Your love score is " +
+      loveScore +
+      "% " +
+      "You love each other like Kanye loves Kanye."
+  );
+} else {
+  alert("Your love score is " + loveScore + "%");
+}
