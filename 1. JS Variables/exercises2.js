@@ -75,6 +75,14 @@ console.log(bmi);
 
 /*2.6 MATH.RANDOM*/
 let random = Math.random();
-random = random * 6; //We put the range from 0 to 5.999999...
+random = random * 6; //If let like this, range would be from 0 to 5.999999 (floating-point number)...
 random = Math.floor(random) + 1; //Now it goes from 1 to 6
 console.log(random);
+
+/*Love calculator*/
+
+let yourName = prompt("What's your name?");
+let hisName = prompt("What's his name?");
+let lovePercentage = Math.random() * 100;
+lovePercentage = Math.floor(lovePercentage) + 1;
+alert("You have " + lovePercentage + "% love score!");
