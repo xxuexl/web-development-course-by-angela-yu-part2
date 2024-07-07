@@ -65,13 +65,13 @@ console.log("Hello friend, here is your " + getSoda(10, 3) + " change");
 
 /*2.5 BMI calculator challenge: Create a BMI calculator using JS.*/
 
-function bmiCalculator(startingWeight, height) {
-  let bmi = startingWeight / (height * height); //?Alt for height: Math.pow(height, 2);
-  return Math.round(bmi);
+function bmiCalculatorA(startingWeight, height) {
+  let bmia = startingWeight / (height * height); //?Alt for height: Math.pow(height, 2);
+  return Math.round(bmia);
 }
 
-let bmi = bmiCalculator(65, 1.8);
-console.log(bmi);
+let bmia = bmiCalculatorA(65, 1.8);
+console.log(bmia);
 
 /*2.6 MATH.RANDOM*/
 let random = Math.random();
@@ -79,7 +79,7 @@ random = random * 6; //If let like this, range would be from 0 to 5.999999 (floa
 random = Math.floor(random) + 1; //Now it goes from 1 to 6
 console.log(random);
 
-/*Love calculator*/
+/*2.7 Exercise: Love calculator*/
 
 let yourName = prompt("What's your name?");
 let hisName = prompt("What's his name?");
@@ -87,7 +87,7 @@ let lovePercentage = Math.random() * 100;
 lovePercentage = Math.floor(lovePercentage) + 1;
 alert("You have " + lovePercentage + "% love score!");
 
-/*IF ELSE CONDITIONALS */
+/*2.8 IF/ELSE CONDITIONALS */
 if (track === "clear") {
   goStraight();
 } else {
@@ -122,3 +122,20 @@ if (loveScore <= 30) {
       " You go together like oil and water."
   );
 }
+
+/*2.9 Exercise: Bmi calculator with if/else */
+
+function bmiCalculator(weight, height) {
+  let bmi = weight / Math.pow(height, 2);
+  let interpretation = " ";
+
+  if (bmi < 18.5) {
+    interpretation = "Your BMI is " + bmi + ", so you are underweight.";
+  } else if (bmi < 24.9) {
+    interpretation = "Your BMI is " + bmi + ", so you have a normal weight.";
+  } else {
+    interpretation = "Your BMI is " + bmi + ", so you are overweight.";
+  }
+  return interpretation;
+}
+bmiCalculator(74, 1.6);
