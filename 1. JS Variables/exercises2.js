@@ -139,3 +139,22 @@ function bmiCalculator(weight, height) {
   return interpretation;
 }
 bmiCalculator(74, 1.6);
+
+/*2.10 Exercise: Leap year with if/else */
+
+function isLeap(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return "Leap year.";
+      } else {
+        return "Not leap year.";
+      }
+    } else {
+      return "Leap year.";
+    }
+  } else {
+    return "Not leap year.";
+  }
+}
+isLeap(2012);
