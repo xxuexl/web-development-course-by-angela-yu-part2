@@ -173,7 +173,17 @@ function isLeap(year) {
 }
 isLeap(2012); */
 
-/*2.11 Arrays: FizzBuzz exercise*/
+/*2.11 ARRAYS + INCLUDES()*/
+let guestList = ["Angela", "Jack", "Pam", "James", "Lara", "Jason"];
+let guestName = prompt("What's your name?");
+
+if (guestList.includes(guestName)) {
+  alert("Welcome!");
+} else {
+  alert("Sorry,maybe next time.");
+}
+
+/*2.12 Arrays: FizzBuzz exercise*/
 
 let output = [];
 let count = 1;
