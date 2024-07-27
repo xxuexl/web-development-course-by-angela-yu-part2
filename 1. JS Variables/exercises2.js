@@ -184,6 +184,15 @@ if (guestList.includes(guestName)) {
 }
 
 /*2.12 Arrays: FizzBuzz exercise*/
+let outputBasic = [];
+let countBasic = 1;
+function basic() {
+  outputBasic.push(countBasic);
+  countBasic++;
+  console.log(outputBasic);
+}
+
+//-------------------------------------------
 
 let output = [];
 let count = 1;
