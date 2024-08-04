@@ -22,3 +22,18 @@ function fizzBuzz() {
   console.log(output);
 }
 fizzBuzz();
+
+/* 99 bottles of beer */
+
+let numberOfBottles = 99;
+while (numberOfBottles >= 1) {
+  let bottleWord = "bottles";
+  if (numberOfBottles === 1) {
+    bottleWord = "bottle";
+  }
+  console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+  console.log(numberOfBottles + " " + bottleWord + " of beer,");
+  console.log("Take one down, pass it around,");
+  numberOfBottles--;
+  console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+}
