@@ -71,3 +71,11 @@ document.querySelectorAll("#list .item");
 
 document.querySelectorAll("#list .item")[2].style.color = "blue";
 */
+
+/*---------MANIPULATING AND CHANGING STYLES OF HTML ELEMENTS WITH JS---------------------
+Camel casing is standard for naming methods and properties in JS.
+In most cases the names are the same, but there are no dashes.
+-The values have to be represented as strings, even numbers. 
+
+document.querySelector("h1").style.fontSize = "5rem";  --> 
+document.querySelector("h1").style.visibility = "hidden";                              */
