@@ -35,5 +35,10 @@ while (numberOfBottles >= 1) {
   console.log(numberOfBottles + " " + bottleWord + " of beer,");
   console.log("Take one down, pass it around,");
   numberOfBottles--;
+  if (numberOfBottles === 1) {
+    bottleWord = "bottle";
+  } else {
+    bottleWord = "bottles";
+  }
   console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
 }
