@@ -54,3 +54,20 @@ Fibonacci sequence:0, 1, 1, 2, 3, 5, 8, 13, 21 ... Where every number is the sum
 Create a function where you can call it by writing the code: fibonacciGenerator (n).
 Where n is the number of items in the sequence.
 So I should be able to call: fibonacciGenerator(3) and get [0,1,1] as the output. */
+function fibonacciGenerator(n) {
+  let output = [];
+  if (n === 1) {
+    output = [0];
+  } else if (n === 2) {
+    output = [0, 1];
+  } else {
+    output = [0, 1];
+    for (let i = 2; i < n; i++) {
+      output.push(output[output.length - 2] + output[output.length - 1]); // [0,1,1]
+    }
+  }
+  return output;
+}
+
+output = fibonacciGenerator(6);
+console.log(output);
