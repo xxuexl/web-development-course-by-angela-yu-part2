@@ -1,5 +1,16 @@
 document.query;
 
+//?------------MINI EXERCISES TO DO INSIDE THE CONSOLE-----------
+/* 1:Select the third li and change the text from the word "Third" to
+anything you want, but you can't touch the HTML, do it inside the console.
+ANSWER: */
+document.firstElementChild.lastElementChild.querySelector(
+  "ul"
+).lastElementChild.innerHTML = "Best";
+/*2:Change the text color of the second Google link to
+red. ANSWER: */
+document.querySelector("li a").style.color = "red";
+
 /*----------------SELECTING HTML ELEMENTS WITH JS---------------------
 TARGETTING VARIOUS ELEMENTS
 
