@@ -11,6 +11,8 @@ document.firstElementChild.lastElementChild.querySelector(
 red. ANSWER: */
 document.querySelector("li a").style.color = "red";
 
+/*3:Use JS to change the background color of the "Click Me" button to yellow. */
+document.querySelector("button").style.backgroundColor = "yellow";
 /*----------------SELECTING HTML ELEMENTS WITH JS---------------------
 TARGETTING VARIOUS ELEMENTS
 
