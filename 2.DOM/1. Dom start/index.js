@@ -13,6 +13,11 @@ document.querySelector("li a").style.color = "red";
 
 /*3:Use JS to change the background color of the "Click Me" button to yellow. */
 document.querySelector("button").style.backgroundColor = "yellow";
+
+/*4: Create a class called "huge", and change the font size to 10rem. When the class huge is applied to 
+any element then it will change the text size to 10rem. Applied it to the h1.  */
+document.querySelector("h1").classList.add("huge");
+
 /*----------------SELECTING HTML ELEMENTS WITH JS---------------------
 TARGETTING VARIOUS ELEMENTS
 
