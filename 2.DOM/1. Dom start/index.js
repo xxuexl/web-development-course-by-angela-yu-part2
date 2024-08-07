@@ -99,3 +99,20 @@ document.querySelector("button").classList.remove("invisible")
 
 document.querySelector("button").classList.toggle("invisible") -->
 If the class invisible is already applied then remove it, and if it's not applied then apply it.   */
+
+/*--------------TEXT MANIPULATION AND THE TEXT CONTENT PROPERTY-------------------------
+document.querySelector("h1").textContent; --> It just gives the text content
+
+document.querySelector("h1").innerHTML = "<em>Good Bye</em>"; -->
+with innerHTML we get the HTML that is in between the element tags too.
+We can add HTML code on the fly. Here we are changing the text and also 
+emphasizing the word.                                                                           */
+
+/*--------------MANIPULATING HTML ELEMENT ATTRIBUTES------------------------------------
+document.querySelector("a"); --> Points the anchor tag that leads towards Google.
+document.querySelector("a").attributes; --> It gets us a list of attributes, in this case the href.
+document.querySelector("a").getAttribute("href"); --> We retrieve the value of that attribute.
+document.querySelector("a").setAttribute("href", "https://www.bing.com"); -->
+We changed its value to the bing website. 
+1st - Which attribute do we want to change.
+2nd - After the comma is what do you want to change it to.                                     */
