@@ -86,3 +86,16 @@ In most cases the names are the same, but there are no dashes.
 
 document.querySelector("h1").style.fontSize = "5rem";  --> 
 document.querySelector("h1").style.visibility = "hidden";                              */
+
+/*---------------SEPARATION OF CONCERNS-------------------------------------------------- 
+document.querySelector("button").classList; -->
+We tap into its classList property -> It gives us a list of the classes that are attached to this element(button).
+Once we have the list of classes -> we can use methods, like .add, and we can add classes.
+
+document.querySelector("button").classList.add("invisible"); -->
+ We can tap into the stylesheet and we can create a separate style for invisible in this case.
+
+document.querySelector("button").classList.remove("invisible")
+
+document.querySelector("button").classList.toggle("invisible") -->
+If the class invisible is already applied then remove it, and if it's not applied then apply it.   */
