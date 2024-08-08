@@ -61,3 +61,35 @@ let houseKeeper2 = new HouseKeeper("Susan", 5, [
 
 console.log(houseKeeper2.name); // We get Susan
 console.log(houseKeeper2.cleaningRepertoire); // We get ["restaurant", "lobby", "kitchen"]
+
+/* METHODS */
+
+let bellBoy1WithMethod = {
+  name: "Timmy",
+  age: 19,
+  hasWorkPermit: true,
+  languages: ["French", "English"],
+  moveSuitcase: function () {
+    alert("May I take your suitcase?");
+    pickUpSuitcase();
+    move();
+  },
+};
+bellBoy1WithMethod.moveSuitcase();
+
+/* Method in a construction function*/
+function HouseKeeperWithMethod(name, yearsOfExperience, cleaningRepertoire) {
+  this.name = name;
+  this.yearsOfExperience = yearsOfExperience;
+  this.cleaningRepertoire = cleaningRepertoire;
+  this.clean = function () {
+    alert("Cleaning in progress...");
+  };
+}
+
+let houseKeeper3 = new HouseKeeperWithMethod("Mini", 6, [
+  "restaurant",
+  "kitchen",
+]);
+
+houseKeeper3.clean();
