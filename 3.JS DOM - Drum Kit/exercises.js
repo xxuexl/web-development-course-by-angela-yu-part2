@@ -32,3 +32,32 @@ let houseKeeper1 = {
   yearsOfExperience: 7,
   cleaningRepertoire: ["bathroom", "lobby", "bedroom"],
 };
+
+//-------- CONSTRUCTOR FUNCTIONS ---------
+//They are shorter than the previous example. 1st letter of the function's name has to be capitalized.
+function BellBoy(name, age, hasWorkPermit, languages) {
+  this.name = name;
+  this.age = age;
+  this.hasWorkPermit = hasWorkPermit;
+  this.languages = languages;
+}
+
+//Initialization of new object with the keyword "new".
+let bellBoy1alt = new BellBoy("Timmy", 19, true, ["French", "English"]);
+let bellBoy2 = new BellBoy("Jimmy", 29, false, ["German", "English"]);
+
+/*Housekeeper construction function*/
+function HouseKeeper(name, yearsOfExperience, cleaningRepertoire) {
+  this.name = name;
+  this.yearsOfExperience = yearsOfExperience;
+  this.cleaningRepertoire = cleaningRepertoire;
+}
+
+let houseKeeper2 = new HouseKeeper("Susan", 5, [
+  "restaurant",
+  "lobby",
+  "kitchen",
+]);
+
+console.log(houseKeeper2.name); // We get Susan
+console.log(houseKeeper2.cleaningRepertoire); // We get ["restaurant", "lobby", "kitchen"]
