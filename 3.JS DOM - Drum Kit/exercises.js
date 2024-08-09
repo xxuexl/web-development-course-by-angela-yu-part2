@@ -93,3 +93,28 @@ let houseKeeper3 = new HouseKeeperWithMethod("Mini", 6, [
 ]);
 
 houseKeeper3.clean();
+
+/* 1.3 -------HIGHER ORDER FUNCTIONS--------------------- */
+document.addEventListener("keydown", respondToKey(event));
+
+function respondToKey(event) {
+  console.log("Key pressed.");
+}
+
+/* CALLBACKS */
+
+function anotherAddEventListener(typeOfEvent, callback) {
+  //Detect Event Code
+
+  let eventThatHappened = {
+    eventType: "keydown",
+    key: "p",
+    durationOfKeypress: 2,
+  };
+  if (eventThatHappened.eventType === typeOfEvent) {
+    callback(eventThatHappened);
+  }
+}
+anotherAddEventListener("keydown", function (event) {
+  console.log(event);
+});
