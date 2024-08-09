@@ -33,6 +33,21 @@ let houseKeeper1 = {
   cleaningRepertoire: ["bathroom", "lobby", "bedroom"],
 };
 
+//Array inside the object + object inside another object.
+let jack = {
+  name: "Jack Lewis",
+  age: 30,
+  education: [
+    {
+      degree: "B.A English Literature",
+      university: "UCLA",
+    },
+    {
+      degree: "M.S Criminology",
+      university: "Berkeley",
+    },
+  ],
+};
 //-------- CONSTRUCTOR FUNCTIONS ---------
 //They are shorter than the previous example. 1st letter of the function's name has to be capitalized.
 function BellBoy(name, age, hasWorkPermit, languages) {
