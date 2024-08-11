@@ -160,3 +160,16 @@ function anotherAddEventListener(typeOfEvent, callback) {
 anotherAddEventListener("keydown", function (event) {
   console.log(event);
 });
+
+/*  ------- ERROR HANDLING ---------- */
+
+try {
+  console.log("Start of try runs");
+  unicycle;
+  console.log("End of try runs -- never reached");
+} catch (err) {
+  console.log("Error has occured: " + err);
+} finally {
+  console.log("This always executes");
+}
+console.log("You have reached the end!");
