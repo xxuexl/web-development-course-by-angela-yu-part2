@@ -109,7 +109,46 @@ let houseKeeper3 = new HouseKeeperWithMethod("Mini", 6, [
 
 houseKeeper3.clean();
 
-/* 1.3 -------HIGHER ORDER FUNCTIONS--------------------- */
+/* ---------- ARROW FUNCTIONS -------------------------*/
+
+const hello = function () {
+  console.log("Hello");
+};
+
+hello();
+
+//Function expression VS arrow function
+
+const hello = () => console.log("Hello");
+
+hello();
+
+//Adding parameters
+
+const goodAfternoon = (surname, age) => {
+  console.log(`Hello ${surname}`);
+  console.log(`You are ${age} years old`);
+};
+
+goodAfternoon("Bro", 25);
+
+//-----------------------------
+// Function expression
+setTimeout(function () {
+  console.log("Good Evening");
+}, 3000);
+
+// VS Callback
+setTimeout(goodEvening, 3000);
+
+function goodEvening() {
+  console.log("Good Evening");
+}
+
+// VS Arrow function
+setTimeout(() => console.log("Good Evening"), 3000);
+
+/* 1. ---------- HIGHER ORDER FUNCTIONS --------------------- */
 document.addEventListener("keydown", respondToKey(event));
 
 function respondToKey(event) {
