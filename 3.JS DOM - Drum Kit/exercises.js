@@ -61,7 +61,7 @@ function BellBoy(name, age, hasWorkPermit, languages) {
 let bellBoy1alt = new BellBoy("Timmy", 19, true, ["French", "English"]);
 let bellBoy2 = new BellBoy("Jimmy", 29, false, ["German", "English"]);
 
-/*Housekeeper construction function*/
+//Housekeeper construction function.
 function HouseKeeper(name, yearsOfExperience, cleaningRepertoire) {
   this.name = name;
   this.yearsOfExperience = yearsOfExperience;
@@ -77,7 +77,7 @@ let houseKeeper2 = new HouseKeeper("Susan", 5, [
 console.log(houseKeeper2.name); // We get Susan
 console.log(houseKeeper2.cleaningRepertoire); // We get ["restaurant", "lobby", "kitchen"]
 
-/* METHODS */
+/*----- METHODS ------- */
 
 let bellBoy1WithMethod = {
   name: "Timmy",
@@ -92,7 +92,7 @@ let bellBoy1WithMethod = {
 };
 bellBoy1WithMethod.moveSuitcase();
 
-/* Method in a construction function*/
+// Method in a construction function
 function HouseKeeperWithMethod(name, yearsOfExperience, cleaningRepertoire) {
   this.name = name;
   this.yearsOfExperience = yearsOfExperience;
@@ -116,7 +116,34 @@ function respondToKey(event) {
   console.log("Key pressed.");
 }
 
-/* CALLBACKS */
+/* 1.4 ------ CALLBACKS ----------- */
+//By using callbacks we are guaranteeing that the function passed in will execute next.
+
+function hello(callback) {
+  console.log("Hello!");
+  callback(); //Calling it after printing "hello!"
+}
+function leave() {
+  console.log("Leave");
+}
+function goodbye() {
+  console.log("Goodbye");
+}
+
+hello(goodbye);
+
+//----------------------
+
+function sum(callback, x, y) {
+  let result = x + y;
+  callback(result);
+}
+function displayInConsole(result) {
+  console.log(result);
+}
+
+sum(displayInConsole, 1, 2);
+//-----------------------
 
 function anotherAddEventListener(typeOfEvent, callback) {
   //Detect Event Code
