@@ -148,14 +148,27 @@ function goodEvening() {
 // VS Arrow function
 setTimeout(() => console.log("Good Evening"), 3000);
 
-/* 1. ---------- HIGHER ORDER FUNCTIONS --------------------- */
+/*  ---------- HIGHER ORDER FUNCTIONS --------------------- */
 document.addEventListener("keydown", respondToKey(event));
 
 function respondToKey(event) {
   console.log("Key pressed.");
 }
 
-/* 1.4 ------ CALLBACKS ----------- */
+/*  ------ CLOSURES ----------- */
+
+function outer() {
+  let message = "Testing"; //Variable in outer function's scope
+
+  function inner() {
+    console.log(message); // Accessing the outer function's variable
+  }
+  inner();
+}
+
+outer();
+
+/*  ------ CALLBACKS ----------- */
 //By using callbacks we are guaranteeing that the function passed in will execute next.
 
 function hello(callback) {
@@ -230,7 +243,7 @@ task1(() => {
   });
 });
 
-/*  ------- ERROR HANDLING ---------- */
+/*  ------- TRY - CATCH - FINALLY ---------- */
 
 try {
   console.log("Start of try runs");
