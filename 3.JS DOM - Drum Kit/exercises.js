@@ -168,6 +168,30 @@ function outer() {
 
 outer();
 
+// -- With 2 functions ----
+
+function createCounter() {
+  let count = 0; //Private variable within the closure
+
+  function increment() {
+    count++;
+    console.log(`Count increased to ${count}`);
+  }
+
+  function getCount() {
+    return count; //Returns the current value of count
+  }
+  //Both functions have access to the count variable through the closure.
+  return { increment, getCount }; //createCounter returns an object with both functions
+}
+
+const counter = createCounter();
+
+counter.increment();
+counter.increment();
+
+console.log(`The current count is ${counter.getCount()}`);
+
 /*  ------ CALLBACKS ----------- */
 //By using callbacks we are guaranteeing that the function passed in will execute next.
 
