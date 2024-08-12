@@ -323,3 +323,17 @@ function takeOutTrash() {
     }, 500);
   });
 }
+
+walkDog()
+  .then((value) => {
+    console.log(value);
+    return cleanKitchen();
+  })
+  .then((value) => {
+    console.log(value);
+    return takeOutTrash();
+  })
+  .then((value) => {
+    console.log(value);
+    console.log("You finished all the chores!");
+  });
