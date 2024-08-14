@@ -267,37 +267,6 @@ task1(() => {
   });
 });
 
-/*  ------- TRY - CATCH - FINALLY ---------- */
-
-try {
-  console.log("Start of try runs");
-  unicycle;
-  console.log("End of try runs -- never reached");
-} catch (err) {
-  console.log("Error has occured: " + err);
-} finally {
-  console.log("This always executes");
-}
-console.log("You have reached the end!");
-
-// THROW
-try {
-  const dividend = Number(window.prompt("Enter a dividend: "));
-  const divisor = Number(window.prompt("Enter a divisor: "));
-  if (divisor == 0) {
-    throw new Error("You can't divide by zero");
-  }
-  if (isNaN(dividend) || isNaN(divisor)) {
-    throw new Error("Values must be a number");
-  }
-  const result = dividend / divisor;
-  console.log(result);
-} catch (error) {
-  console.log(error);
-}
-
-console.log("You have reached the end!");
-
 /*  ------- PROMISES ---------- */
 
 function walkDog() {
@@ -354,3 +323,76 @@ walkDog()
     console.log("You finished all the chores!");
   })
   .catch((error) => console.log(error));
+
+/*  ------- TRY - CATCH - FINALLY ---------- */
+
+try {
+  console.log("Start of try runs");
+  unicycle;
+  console.log("End of try runs -- never reached");
+} catch (err) {
+  console.log("Error has occured: " + err);
+} finally {
+  console.log("This always executes");
+}
+console.log("You have reached the end!");
+
+// THROW
+try {
+  const dividend = Number(window.prompt("Enter a dividend: "));
+  const divisor = Number(window.prompt("Enter a divisor: "));
+  if (divisor == 0) {
+    throw new Error("You can't divide by zero");
+  }
+  if (isNaN(dividend) || isNaN(divisor)) {
+    throw new Error("Values must be a number");
+  }
+  const result = dividend / divisor;
+  console.log(result);
+} catch (error) {
+  console.log(error);
+}
+
+console.log("You have reached the end!");
+
+/*  ------- ASYNC/WAIT ---------- */
+
+function walkDog() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const dogWalked = true;
+
+      if (dogWalked) {
+        resolve("You walk the dog");
+      } else {
+        reject("You DIDN'T walk the dog");
+      }
+    }, 1500);
+  });
+}
+
+function cleanKitchen() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const kitchenCleaned = true;
+      if (kitchenCleaned) {
+        resolve("You clean the kitchen");
+      } else {
+        reject("You DIDN'T clean the kitchen");
+      }
+    }, 500);
+  });
+}
+
+function takeOutTrash() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const trashTakenOut = false;
+      if (trashTakenOut) {
+        resolve("You take out the trash");
+      } else {
+        reject("You DIDN'T take out the trash");
+      }
+    }, 500);
+  });
+}
