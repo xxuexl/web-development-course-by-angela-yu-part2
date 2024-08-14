@@ -387,7 +387,7 @@ function cleanKitchen() {
 function takeOutTrash() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const trashTakenOut = false;
+      const trashTakenOut = true;
       if (trashTakenOut) {
         resolve("You take out the trash");
       } else {
@@ -396,3 +396,18 @@ function takeOutTrash() {
     }, 500);
   });
 }
+
+async function doChores() {
+  const walkDogResult = await walkDog();
+  console.log(walkDogResult);
+
+  const cleanKitchenResult = await cleanKitchen();
+  console.log(cleanKitchenResult);
+
+  const takeOutTrashResult = await takeOutTrash();
+  console.log(takeOutTrashResult);
+
+  console.log("You finished all the chores!");
+}
+
+doChores();
