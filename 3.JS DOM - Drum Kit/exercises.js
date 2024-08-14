@@ -398,16 +398,19 @@ function takeOutTrash() {
 }
 
 async function doChores() {
-  const walkDogResult = await walkDog();
-  console.log(walkDogResult);
+  try {
+    const walkDogResult = await walkDog();
+    console.log(walkDogResult);
 
-  const cleanKitchenResult = await cleanKitchen();
-  console.log(cleanKitchenResult);
+    const cleanKitchenResult = await cleanKitchen();
+    console.log(cleanKitchenResult);
 
-  const takeOutTrashResult = await takeOutTrash();
-  console.log(takeOutTrashResult);
+    const takeOutTrashResult = await takeOutTrash();
+    console.log(takeOutTrashResult);
 
-  console.log("You finished all the chores!");
+    console.log("You finished all the chores!");
+  } catch (error) {
+    console.error(error);
+  }
 }
-
 doChores();
